@@ -1,0 +1,16 @@
+type User {
+  id: ID!
+  firstName: String
+  lastName: String
+  questions: [Question]
+}
+
+type Question {
+  id: ID!
+  content: String!
+  votes: Int
+}
+
+type Query {
+  user(id: ID!): User
+}
